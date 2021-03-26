@@ -1,0 +1,87 @@
+@import '../../../main';
+
+.contact-wrapper{
+    width: 90%;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+
+    h4{
+        text-align: center;
+        font-size: 2rem;
+        font-family: $general-text;
+        margin-bottom: 20px;
+    }
+
+
+
+    .contact-container{
+        text-align: center;
+        
+        .contact-form{
+            font-family: $general-text;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .input-group{
+                padding: 10px;
+                margin-bottom: 1rem;
+                width: 100%;
+
+                input,
+                textarea{
+                    width: 20%;
+                    padding: 10px;
+                    border: 2px solid $primary;
+                    background: transparent;
+                    box-shadow: 2px 0px 20px rgba($color: #000000, $alpha: 0.5);
+                    transition: all ease .3s;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+                input:focus{
+                    width: 30%;
+                    border-radius: 100px;
+                }
+
+
+                textarea{
+                    resize: vertical;
+                    min-height: 10rem;
+                    max-height: 20rem;
+
+                    &:focus{
+                        width: 90%;
+                    }
+                }
+            }
+
+            input[type="submit"]{
+                width: 20%;
+                padding: 10px;
+                border-radius: 100px;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                border: 2px solid $primary;
+                background: none;
+                box-shadow: 3px 0px 20px rgba($color: #000000, $alpha: 0.5);
+                transition: all ease .3s;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: $primary;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}

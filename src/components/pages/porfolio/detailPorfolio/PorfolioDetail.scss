@@ -1,0 +1,67 @@
+@import '../../../../main';
+
+.project-detail-container{
+    width: 95%;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    font-family: $general-text;
+
+    .project-explain{
+
+        .project-header{
+            text-align: center;
+            h1{
+                font-size: 3rem;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+
+                .name-project{
+                    color: $primary;
+                }
+            }
+            img{
+                width: 90%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .explain-container{
+            font-size: 1.2rem;
+            padding: 40px;
+            text-align: justify;
+        }
+    }
+
+    .project-technologies{
+        padding: 20px;
+        
+        h4{
+            text-align: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        
+        ul{
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            li{
+                width: 100%;
+                padding: 20px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+                border: 2px solid $primary;
+                border-radius: 100px;
+            }
+        }
+    }
+}

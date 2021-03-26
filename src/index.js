@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import { PorfolioProvider } from './components/Context/PorfolioContext';
 import reportWebVitals from './reportWebVitals';
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PorfolioProvider>
+      <App />
+    </PorfolioProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,29 @@
+@import '../../../main';
+
+.toggle-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+
+.toggle-button__line{
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+@media (min-width: 769px){
+    .toggle-button{
+        display: none;
+    }
+}

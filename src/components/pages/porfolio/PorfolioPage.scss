@@ -1,0 +1,155 @@
+@import '../../../main';
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-rows: 1% 99%;
+
+    .filter-by-technologies{
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4{
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-family: $general-text;
+        }
+
+        p{
+            width: 10%;
+            padding: 10px;
+            border: 2px solid $primary;
+            background: transparent;
+            margin-top: 15px;
+            margin-right: 10px;
+            transition: all ease .5s;
+            font-size: 1rem;
+            font-family: $general-text;
+            border-radius: 100px;
+
+            &:hover{
+                cursor: pointer;
+                background-color: grey;
+            }
+        }
+        
+        .list-tech{
+            display: flex;
+
+
+            li{
+                width: 150px;
+                padding: 10px;
+                border: 2px solid $primary;
+                background: transparent;
+                margin-top: 15px;
+                margin-right: 10px;
+                text-align: center;
+                transition: all ease .5s;
+                font-size: 1rem;
+                font-family: $general-text;
+                border-radius: 100px;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: $primary;
+                }
+
+            }
+        }
+        
+    }
+
+
+    .list-projects{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 7rem;
+
+        .project-wrapper{
+            display: grid;
+            grid-template-columns: 5% 45% 50%;
+            align-items: center;
+            width: 100%;
+            max-width: 80%;
+            /* Esto centra el div y le añade un margin top */
+            margin-top: 6rem;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-left: auto;
+
+            border: 2px solid $primary;
+            font-family: $general-text;
+            padding: 2rem;
+            border-radius: 40px 0px 40px 0px;
+            overflow: hidden;
+
+            box-shadow: 3px 0px 20px rgba($color: #000000, $alpha: 0.5);
+
+
+            .project-number{
+                font-size: 7rem;
+                color: rgba($color: #FFFFFF, $alpha: 0.7);
+                z-index: 1;
+            }
+
+            .project-header{
+                margin-left: 20px;
+                margin-right: 20px;
+                width: 100%;
+                max-width: 45rem;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .project-body{
+                display: flex;
+                flex-direction: column;
+                z-index: 1;
+                margin-left: 2.3rem;
+                h2{
+                    text-align: center;
+                    z-index: 1;
+                    font-size: 2rem;
+                }
+
+                .project-description{
+                    text-align: center;
+                    z-index: 1;
+                }
+
+
+                .buttons{
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 3rem;
+                    z-index: 1;
+
+                    a{
+                        border: 2px solid $primary;
+                        padding: 1.3rem;
+                        border-radius: 100px;
+
+                        &:hover{
+                            background-color: $primary;
+                        }
+                    }
+                }
+
+            }
+
+            .technologies{
+                margin-top: 20px;
+                text-align: right;
+            }
+
+        }
+    }
+}
