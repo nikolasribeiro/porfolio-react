@@ -132,3 +132,23 @@
 
 
 }
+
+@media only screen and (max-width: 1024px){
+    .blog-wrapper{
+        grid-template-columns: 100% !important;
+    }
+
+    .blog{
+        width: 100% !important;
+
+        .blog-image{
+            img{
+                max-width: 55rem !important;
+            }
+        }
+    }
+
+    .blog-footer{
+        flex-direction: row !important;
+    }
+}

@@ -30,6 +30,7 @@ export const PorfolioPage = () => {
 
     return (
         <section className="grid-layout">
+            
             <div className="filter-by-technologies">
 
                 <h4>Search By Technologies</h4>

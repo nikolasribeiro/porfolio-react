@@ -153,3 +153,27 @@
         }
     }
 }
+
+@media only screen and (max-width: 1024px){
+    .grid-layout{
+        grid-template-columns: 100%;
+    }
+
+    .filter-by-technologies{
+        margin-bottom: 0 !important;
+        h4{
+            display: none;
+        }
+        p{
+            display: none;
+        }
+        ul{
+            display: none !important;
+        }
+    }
+
+    .list-projects{
+        margin-top: 0 !important;
+        grid-template-columns: 100% !important;
+    }
+}

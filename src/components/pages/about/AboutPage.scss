@@ -84,3 +84,10 @@
     }
 
 }
+
+/* media querys */
+@media only screen and (max-width: 1024px){
+    .about-container{
+        max-width: 90%;
+    }
+}

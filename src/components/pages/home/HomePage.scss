@@ -51,3 +51,27 @@
         }
     }
 }
+
+
+/* mediaquerys */
+@media only screen and (max-width: 1024px){
+    .image-container{
+        display: block;
+
+        #image{
+            display: none;
+        }
+
+        .main-description{
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: center !important;
+            margin-left: 430px;
+
+            h2{
+                display: none;
+            }
+        }
+
+    }
+}
