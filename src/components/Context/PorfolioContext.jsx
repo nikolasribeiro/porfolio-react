@@ -53,7 +53,9 @@ export const PorfolioProvider = ({children}) => {
                 uniqueTechnologies,
 
                 setToggleMenu,
-                toggleTheme
+                toggleTheme,
+                setProjects,
+                setBlogs
             }}
         >
             { children }
