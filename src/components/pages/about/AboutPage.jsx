@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { PorfolioContext } from '../../Context/PorfolioContext';
 
 import './AboutPage.scss';
 
 export const AboutPage = () => {
+
+    const { setToggleMenu } = useContext(PorfolioContext);
+
+    useEffect(()=>{
+        setToggleMenu(false);
+    }, [setToggleMenu]);
+
     return (
         <div className="wrapper">
             <div className="about-container animate__animated animate__fadeIn">

@@ -152,3 +152,15 @@
         flex-direction: row !important;
     }
 }
+
+@media only screen and (max-width: 768px){
+    .blog{
+        width: 100% !important;
+
+        .blog-image{
+            img{
+                max-width: 40rem !important;
+            }
+        }
+    }
+}

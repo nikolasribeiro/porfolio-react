@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Redirect, useParams } from 'react-router';
 import { getProjectById } from '../../../../selectors/getProjectById';
+import { PorfolioContext } from '../../../Context/PorfolioContext';
 import './PorfolioDetail.scss';
 
 
 export const PorfolioDetail = () => {
+
+    const { setToggleMenu } = useContext(PorfolioContext);
+
+    useEffect(() => {
+        setToggleMenu(false);
+    }, [setToggleMenu])
 
     const { number } = useParams();
     const project = getProjectById(number);

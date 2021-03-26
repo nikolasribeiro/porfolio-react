@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import './HomePage.scss';
 
 // Static assets
 import { Link } from 'react-router-dom';
+import { PorfolioContext } from '../../Context/PorfolioContext';
 
 export const HomePage = () => {
+
+    const { setToggleMenu } = useContext(PorfolioContext);
+
+    useEffect(()=>{
+        
+        setToggleMenu(false);
+
+    }, [setToggleMenu]);
+
     return (
         <>
             <div className="home-container animate__animated animate__fadeInUp">

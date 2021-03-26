@@ -74,4 +74,41 @@
         }
 
     }
+
+    .social-links{
+        flex-direction: row !important;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+
+    .image-container{
+        display: grid !important;
+        grid-template-rows: 1fr;
+
+        .main-description{
+            margin-left: 320px;
+        }
+    }
+
+    .social-links{
+        align-items: center;
+        flex-direction: column !important;
+
+        .link-to-social{
+            width: 90%;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .main-description{
+        padding: 2rem;
+        font-size: 2rem !important;
+        margin-left: 110px !important;
+    }
 }

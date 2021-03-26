@@ -177,3 +177,25 @@
         grid-template-columns: 100% !important;
     }
 }
+
+
+@media only screen and (max-width: 768px){
+    .project-wrapper{
+        grid-template-columns: 1fr !important;
+
+        .project-number{
+            text-align: center;
+        }
+
+        .project-container{
+            .technologies{
+                display: flex !important;
+                justify-content: center !important;
+
+                p{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

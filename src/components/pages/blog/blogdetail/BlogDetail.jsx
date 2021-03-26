@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Redirect, useParams } from 'react-router';
 import { getBlogBySlug } from '../../../../selectors/getBlogBySlug';
+import { PorfolioContext } from '../../../Context/PorfolioContext';
 import './BlogDetail.scss';
 
 export const BlogDetail = () => {
+
+    const {setToggleMenu} = useContext(PorfolioContext);
+
+    useEffect(() => {
+        setToggleMenu(false);
+    }, [setToggleMenu])
+
 
     const { slug } = useParams();
     const post = getBlogBySlug(slug);

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PorfolioContext } from '../../Context/PorfolioContext';
 import './PorfolioPage.scss';
@@ -6,8 +6,13 @@ import './PorfolioPage.scss';
 
 export const PorfolioPage = () => {
 
-    const { uniqueTechnologies, projects } = useContext(PorfolioContext);
+    const { uniqueTechnologies, projects, setToggleMenu } = useContext(PorfolioContext);
     const [filteredProjects, setFilteredProjects] = useState(projects);
+
+    useEffect(() => {
+        setToggleMenu(false);
+    }, [setToggleMenu])
+
 
     const handleClick = (technologie) => {
         
@@ -47,6 +52,7 @@ export const PorfolioPage = () => {
                 {filteredProjects.map(project => (
 
                     <div key={project.number} className={`project-wrapper animate__animated animate__fadeInLeft animate__faster`}>
+                        
                         <div className="project-number">
                             <h4>{project.number}</h4>
                         </div>

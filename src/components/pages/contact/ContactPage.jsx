@@ -1,7 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { PorfolioContext } from '../../Context/PorfolioContext';
 import './ContactPage.scss';
 
 export const ContactPage = () => {
+
+    const { setToggleMenu } = useContext(PorfolioContext);
+    
+    useEffect(()=>{
+        setToggleMenu(false);
+    }, [setToggleMenu]);
+
 
     const [contentForm, setContentForm] = useState({
         name: '',

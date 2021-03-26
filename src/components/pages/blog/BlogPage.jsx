@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PorfolioContext } from '../../Context/PorfolioContext';
 
@@ -6,8 +6,12 @@ import './BlogPage.scss';
 
 export const BlogPage = () => {
 
-    const { blogs } = useContext(PorfolioContext);
+    const { blogs, setToggleMenu } = useContext(PorfolioContext);
 
+
+    useEffect(() => {
+        setToggleMenu(false);
+    }, [setToggleMenu]);
 
     const [inputSearch, setInputSearch] = useState({
         search: ""
