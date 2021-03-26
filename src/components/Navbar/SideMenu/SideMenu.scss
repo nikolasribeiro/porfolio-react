@@ -41,3 +41,13 @@
         display: none;
     }
 }
+
+@media (max-width: 425px){
+    .side-menu{
+        width: 100%;
+
+        .links{
+            padding: 0;
+        }
+    }
+}

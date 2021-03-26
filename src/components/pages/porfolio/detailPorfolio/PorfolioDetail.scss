@@ -65,3 +65,10 @@
         }
     }
 }
+
+@media (max-width: 768px){
+    .project-detail-container{
+        grid-template-columns: 100%;
+        grid-template-rows: 80% 20%;
+    }
+}
