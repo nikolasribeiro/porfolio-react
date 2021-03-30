@@ -13,7 +13,7 @@ export const PorfolioProvider = ({children}) => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/v1/porfolio')
+        axios.get('https://backend-porfolio.herokuapp.com/api/v1/porfolio/')
          .then(res => {
              const projectsApi = res.data;
              setProjects(projectsApi);
@@ -22,7 +22,7 @@ export const PorfolioProvider = ({children}) => {
 
 
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/v1/blogs')
+        axios.get('https://backend-porfolio.herokuapp.com/api/v1/blogs/')
         .then(res => {
             const blogsApi = res.data;
             setBlogs(blogsApi);
