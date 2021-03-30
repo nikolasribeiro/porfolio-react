@@ -1,30 +1,34 @@
 import React, { useContext, useEffect } from 'react';
 import { Redirect, useParams } from 'react-router';
-import { getProjectById } from '../../../../selectors/getProjectById';
 import { PorfolioContext } from '../../../Context/PorfolioContext';
 import './PorfolioDetail.scss';
 
 
 export const PorfolioDetail = () => {
 
-    const { setToggleMenu } = useContext(PorfolioContext);
+    const { projects, setToggleMenu } = useContext(PorfolioContext);
 
     useEffect(() => {
         setToggleMenu(false);
     }, [setToggleMenu])
 
+    const getProjectById = (number) => {
+        return projects.find(project => project.number === number);
+    }
+
+
     const { number } = useParams();
-    const project = getProjectById(number);
+    const project = getProjectById(parseInt(number));
 
     if(!project){
         return <Redirect to="/porfolio" />;
     }
 
     const {
-        title,
-        description,
+        name_project,
+        long_description,
         technologies,
-        img
+        image_project
     } = project;
 
     return (
@@ -33,14 +37,14 @@ export const PorfolioDetail = () => {
             <div className="project-explain">
 
                 <div className="project-header">
-                    <h1>Project: <span className="name-project">{title}</span></h1>
+                    <h1>Project: <span className="name-project">{name_project}</span></h1>
                     <img 
-                        src={`../assets/img/${img}.png`}
-                        alt={`project ${title}`}
+                        src={image_project}
+                        alt={`project ${name_project}`}
                     />
                 </div>
                 <div className="explain-container">
-                    {description}
+                    {long_description}
                 </div>
             
             </div>
@@ -49,8 +53,8 @@ export const PorfolioDetail = () => {
                 <h4>Technologies Used for this project</h4>
                 <ul>
                     {
-                        technologies.map(tech => (
-                            <li>{tech}</li>
+                        technologies.split(', ').map(tech => (
+                            <li key={tech}>{tech}</li>
                         ))
                     }
                 </ul>

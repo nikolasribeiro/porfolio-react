@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { PorfolioContext } from '../../Context/PorfolioContext';
 import './PorfolioPage.scss';
 
-
 export const PorfolioPage = () => {
 
     const { uniqueTechnologies, projects, setToggleMenu } = useContext(PorfolioContext);
@@ -13,6 +12,7 @@ export const PorfolioPage = () => {
         setToggleMenu(false);
     }, [setToggleMenu])
 
+    useEffect(()=>{}, [projects]);
 
     const handleClick = (technologie) => {
         
@@ -21,7 +21,7 @@ export const PorfolioPage = () => {
             // filter by ID when user clicks on <li>
             setFilteredProjects(
                 projects.filter(project => {
-                    return project.technologies.some(tech => {
+                    return project.technologies.split(', ').some(tech => {
                         return tech === technologie;
                     });
                 })
@@ -31,7 +31,6 @@ export const PorfolioPage = () => {
         }
 
     }
-
 
     return (
         <section className="grid-layout">
@@ -47,7 +46,7 @@ export const PorfolioPage = () => {
                 </ul>
 
             </div>
-            
+
             <div className="list-projects">
                 {filteredProjects.map(project => (
 
@@ -59,23 +58,23 @@ export const PorfolioPage = () => {
 
                         <div className="project-header">
                             <img 
-                                src={`./assets/img/${project.img}.png`}
-                                alt={project.title}
+                                src={project.image_project}
+                                alt={project.name_project}
                             />
                         </div>
 
                         <div className="project-container">
 
                             <div className="project-body">
-                                <h2>{project.title}</h2>
+                                <h2>{project.name_project}</h2>
                                 <p className="project-description">
-                                    {project.description}
+                                    {project.short_description}
                                 </p>
 
                                 <div className="buttons">
                                     <Link to={`./porfolio/${project.number}`}>Read More</Link>
                                     <a 
-                                        href={project.sourceCode} 
+                                        href={project.source_code} 
                                         target="_blank" 
                                         rel="noreferrer"
                                     >Source Code</a>
@@ -83,9 +82,11 @@ export const PorfolioPage = () => {
                             </div>
 
                             <div className="technologies">
-                                {project.technologies.map(tech => (
-                                    <p>{tech}</p>
-                                ))}
+                                {   
+                                    project.technologies.split(', ').map(tech => (
+                                        <p key={tech}>{tech}</p>
+                                    ))
+                                }
                             </div>
 
                         </div>

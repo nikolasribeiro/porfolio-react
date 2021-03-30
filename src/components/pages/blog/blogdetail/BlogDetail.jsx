@@ -1,17 +1,19 @@
 import React, { useContext, useEffect } from 'react';
 import { Redirect, useParams } from 'react-router';
-import { getBlogBySlug } from '../../../../selectors/getBlogBySlug';
 import { PorfolioContext } from '../../../Context/PorfolioContext';
 import './BlogDetail.scss';
 
 export const BlogDetail = () => {
 
-    const {setToggleMenu} = useContext(PorfolioContext);
+    const { blogs, setToggleMenu} = useContext(PorfolioContext);
 
     useEffect(() => {
         setToggleMenu(false);
     }, [setToggleMenu])
 
+    const getBlogBySlug = (slug) => {
+        return blogs.find(blog => blog.slug === slug);
+    }
 
     const { slug } = useParams();
     const post = getBlogBySlug(slug);
@@ -22,9 +24,10 @@ export const BlogDetail = () => {
 
     const {
         title,
-        longDesc,
-        blogPostDate,
-        author
+        image_blog,
+        long_blog_description,
+        author,
+        publish_date
     } = post;
 
     return (
@@ -34,9 +37,9 @@ export const BlogDetail = () => {
                 
                 <div className="detail-header">
                     <h1 className="detail-title">{title}</h1>
-                    <p className="detail-author">By {author}</p>
+                    <p className="detail-author">By {author === 1? 'Nicolas':''}</p>
                     <span className="detail-date_post">
-                        Posted on {blogPostDate}
+                        Posted on {publish_date}
                     </span>
                     <hr/>
                 </div>
@@ -44,7 +47,7 @@ export const BlogDetail = () => {
                 <div className="detail-body">
                     <div className="detail-image">
                         <img 
-                            src="../assets/img/image1.jpg"
+                            src={image_blog}
                             alt="Detail img"
                             style={{maxHeight:'600px'}}
                         />
@@ -52,7 +55,7 @@ export const BlogDetail = () => {
                     </div>
 
                     <div className="detail-content">
-                        {longDesc}
+                        {long_blog_description}
                     </div>
                 </div>
 

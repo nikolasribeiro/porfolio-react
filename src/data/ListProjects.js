@@ -6,7 +6,7 @@ export const listProjects = [
         title: "SILIS",
         description: "SILIS is a payroll managment system that can handle 5000 thousand employees in a couple of minutes.",
         sourceCode: "https://github.com/nikolasribeiro/silisv4",
-        technologies: ["Python", "PyQt5", "SQLite"]
+        technologies: "Python, PyQt5, SQLite"
     },
     {
         number: "2",
@@ -14,7 +14,7 @@ export const listProjects = [
         title: "COVID Tracker React",
         description: "CovidTracker description",
         sourceCode: "https://github.com/nikolasribeiro/covid-tracker",
-        technologies: ["Javascript", "React"]
+        technologies: "Javascript, React"
     },
     {
         number: "3",
@@ -22,7 +22,7 @@ export const listProjects = [
         title: "Install Developer",
         description: "SILIS is a payroll managment system that can handle 5000 thousand employees in a couple of minutes.",
         sourceCode: "https://github.com/nikolasribeiro/install-developer",
-        technologies: ["Python"]
+        technologies: "Python"
     },
     {
         number: "4",
@@ -30,7 +30,7 @@ export const listProjects = [
         title: "Clicker Game Python",
         description: "SILIS is a payroll managment system that can handle 5000 thousand employees in a couple of minutes.",
         sourceCode: "https://github.com/nikolasribeiro/covid-tracker",
-        technologies: ["Python", "PyQt5"]
+        technologies: "Python, PyQt5"
 
     },
     {
@@ -39,7 +39,7 @@ export const listProjects = [
         title: "Jovenes40",
         description: "SILIS is a payroll managment system that can handle 5000 thousand employees in a couple of minutes.",
         sourceCode: "https://github.com/nikolasribeiro/covid-tracker",
-        technologies: ["Python", "Django", "HTML", "CSS"]
+        technologies: "Python, Django, HTML, CSS"
 
     },
     {
@@ -48,7 +48,7 @@ export const listProjects = [
         title: "Nicolas Ribeiro Website",
         description: "SILIS is a payroll managment system that can handle 5000 thousand employees in a couple of minutes.",
         sourceCode: "https://github.com/nikolasribeiro/covid-tracker",
-        technologies: ["Python", "Django", "HTML", "SCSS"]
+        technologies: "Python, Django, HTML, SCSS"
 
     },
     {
@@ -57,7 +57,7 @@ export const listProjects = [
         title: "Holbertonscript",
         description: "SILIS is a payroll managment system that can handle 5000 thousand employees in a couple of minutes.",
         sourceCode: "https://github.com/nikolasribeiro/covid-tracker",
-        technologies: ["Python"]
+        technologies: "Python"
 
     },
     {
@@ -66,7 +66,7 @@ export const listProjects = [
         title: "Administrador Pacientes",
         description: "SILIS is a payroll managment system that can handle 5000 thousand employees in a couple of minutes.",
         sourceCode: "https://github.com/nikolasribeiro/covid-tracker",
-        technologies: ["Javascript", "React"]
+        technologies: "Javascript, React"
 
     }
 

@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { PorfolioContext } from '../../Context/PorfolioContext';
+import { BlogPost } from './blogComponent/BlogPost';
 
 import './BlogPage.scss';
 
 export const BlogPage = () => {
 
     const { blogs, setToggleMenu } = useContext(PorfolioContext);
-
 
     useEffect(() => {
         setToggleMenu(false);
@@ -34,41 +33,8 @@ export const BlogPage = () => {
 
             <div className="blog-container">
 
-                {filteredBlogs.map(post => (
-
-                    <div className="blog animate__faster animate__animated animate__fadeIn" key={post.slug}>
-
-                        <div className="blog-image">
-                            <img 
-                                src="../assets/img/image1.jpg"
-                                alt="blog img"
-                                style={{width: '1080px', height: '500px'}}
-                            />
-                        </div>
-
-                        <div className="blog-content">
-
-                            <h3 className="blog-title">{post.title}</h3>
-
-                            <div className="short-description">
-                            {post.short_desc}
-                            </div>
-
-                            <div className="read-more-button">
-                                <Link to={`./blog/${post.slug}`}>Read More</Link>
-                                <div></div>
-                            </div>
-
-                            <div className="blog-footer">
-                                <div className="blog-info">
-                                    Posted on {post.blogPostDate} by {post.author}
-                                </div>
-                                <div></div>
-                            </div>
-
-                        </div>
-
-                    </div>
+                {filteredBlogs.reverse().map(post => (
+                    <BlogPost post={post} key={post.id}/>
                 ))}
 
             </div>

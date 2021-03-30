@@ -1,6 +1,5 @@
-import { createContext, useState } from 'react';
-import { blogPost } from '../../data/BlogPosts';
-import { listProjects } from '../../data/ListProjects';
+import axios from 'axios';
+import { createContext, useEffect, useState } from 'react';
 
 export const PorfolioContext = createContext();
 
@@ -8,13 +7,27 @@ export const PorfolioProvider = ({children}) => {
 
     // Get all the projects and puts inside the porfolio
     // context
-    const [projects, setProjects] = useState(listProjects);
-    
-    
+    const [projects, setProjects] = useState([]);
+
     // Get all the blogs posted on the site
-    const [blogs, setBlogs] = useState(blogPost);
-    
-    
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(()=>{
+        axios.get('http://localhost:8000/api/v1/porfolio')
+         .then(res => {
+             const projectsApi = res.data;
+             setProjects(projectsApi);
+         })
+    }, [setProjects]);
+
+
+    useEffect(()=>{
+        axios.get('http://localhost:8000/api/v1/blogs')
+        .then(res => {
+            const blogsApi = res.data;
+            setBlogs(blogsApi);
+        })
+    },[setBlogs]);
     
     // toggle variable for display navbar
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -35,10 +48,13 @@ export const PorfolioProvider = ({children}) => {
 
     // Get the unique technologies that i used
     const allTechnologies = [];
+    let temp;
 
-    projects.map(project => (
-        project.technologies.map(tech => allTechnologies.push(tech))
-    ));
+    projects.map(project => {
+        temp = project.technologies.split(', ')
+        return temp.map(tech => allTechnologies.push(tech))
+    });
+
     let uniqueTechnologies = [];
     uniqueTechnologies = [...new Set(allTechnologies)];
 
