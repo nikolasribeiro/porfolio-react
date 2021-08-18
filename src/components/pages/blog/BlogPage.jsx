@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { PorfolioContext } from '../../Context/PorfolioContext';
-import { BlogPost } from './blogComponent/BlogPost';
+//import { BlogPost } from './blogComponent/BlogPost';
 
 import './BlogPage.scss';
 
@@ -17,6 +17,7 @@ export const BlogPage = () => {
     });
     const { search } = inputSearch;
 
+    /*
     const handleInputChange = ({ target }) => {
         setInputSearch({
             ...inputSearch,
@@ -27,7 +28,7 @@ export const BlogPage = () => {
     let filteredBlogs = blogs.filter(post => (
         post.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
     ));
-
+    */
     return (
 
         <div style={{

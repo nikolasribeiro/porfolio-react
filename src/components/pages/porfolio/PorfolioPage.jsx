@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { PorfolioContext } from '../../Context/PorfolioContext';
 import './PorfolioPage.scss';
 
 export const PorfolioPage = () => {
-
+    /*
     const { uniqueTechnologies, projects, setToggleMenu } = useContext(PorfolioContext);
     const [filteredProjects, setFilteredProjects] = useState(projects);
 
@@ -31,7 +31,7 @@ export const PorfolioPage = () => {
         }
 
     }
-
+    */
     return (
         <div style={{
             width: '100wh',
