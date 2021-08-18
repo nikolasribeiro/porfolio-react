@@ -23,7 +23,7 @@ export const AboutPage = () => {
                     <div className="text animate__animated animate__fadeIn">
                        <span
                         className="first-letter"
-                       >s</span>elf-taugh, Python programmer, React Developer
+                       >s</span>elf-taugh, Python programmer, React/React Native Developer
                        and future Rust Developer, Im Nicolas Ribeiro. 
                        Welcome to my Website!
                        <br/>
@@ -35,12 +35,11 @@ export const AboutPage = () => {
                        <br/>
                        My skill list:
                        <ul>
-                           <li className="list-skill animate__faster animate__animated animate__fadeIn">HTML5</li>
-                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-1s">CSS3</li>
-                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-2s">Javascript</li>
-                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-3s">ReactJS</li>
-                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-4s">Python</li>
-                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-5s">Django</li>
+                           <li className="list-skill animate__faster animate__animated animate__fadeIn">ReactJS</li>
+                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-1s">React Native</li>
+                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-2s">Javascript Vanilla</li>
+                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-3s">Python</li>
+                           <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-4s">Django</li>
                            <li className="list-skill animate__faster animate__animated animate__fadeIn animate__delay-5s">Heroku</li>
                        </ul>
 

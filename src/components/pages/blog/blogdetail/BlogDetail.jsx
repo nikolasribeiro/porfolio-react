@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Redirect, useParams } from 'react-router';
 import { PorfolioContext } from '../../../Context/PorfolioContext';
 import './BlogDetail.scss';
+import dateFormat from 'dateformat';
 
 export const BlogDetail = () => {
 
@@ -39,7 +40,7 @@ export const BlogDetail = () => {
                     <h1 className="detail-title">{title}</h1>
                     <p className="detail-author">By {author === 1? 'Nicolas':''}</p>
                     <span className="detail-date_post">
-                        Posted on {publish_date}
+                        Posted on {dateFormat(publish_date, "mmmm dS, yyyy")}
                     </span>
                     <hr/>
                 </div>

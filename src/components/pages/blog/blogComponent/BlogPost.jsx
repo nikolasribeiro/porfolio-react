@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import dateFormat from 'dateformat';
 
 export const BlogPost = ( {post} ) => {
     return (
@@ -23,7 +24,7 @@ export const BlogPost = ( {post} ) => {
                 </div>
                 <div className="blog-footer">
                     <div className="blog-info">
-                        Posted on {post.publish_date} by {post.author === 1 ? 'Nicolas': ''}
+                        Posted on {dateFormat(post.publish_date, "mmmm dS, yyyy")} by {post.author === 1 ? 'Nicolas': ''}
                     </div>
                     <div></div>
                 </div>

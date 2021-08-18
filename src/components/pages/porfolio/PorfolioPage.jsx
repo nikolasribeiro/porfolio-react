@@ -33,6 +33,15 @@ export const PorfolioPage = () => {
     }
 
     return (
+        <div style={{
+            width: '100wh',
+            height: '90vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}>
+            <h1>PAGINA BAJO MANTENIMIENTO</h1>
+        {/* 
         <section className="grid-layout">
             
             <div className="filter-by-technologies">
@@ -96,7 +105,8 @@ export const PorfolioPage = () => {
                 ))}
             </div>
         </section>
-
+        */}
+        </div>
     );
 }
 

@@ -29,7 +29,17 @@ export const BlogPage = () => {
     ));
 
     return (
-        <div className="blog-wrapper">
+
+        <div style={{
+            width: '100wh',
+            height: '90vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}>
+            <h1>PAGINA BAJO MANTENIMIENTO</h1>
+        {/* 
+            <div className="blog-wrapper">
 
             <div className="blog-container">
 
@@ -57,5 +67,9 @@ export const BlogPage = () => {
             </aside>
 
         </div>
+        */}
+        </div>
+
+        
     );
 }
