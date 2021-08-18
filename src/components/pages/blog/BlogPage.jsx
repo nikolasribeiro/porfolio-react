@@ -1,11 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { PorfolioContext } from '../../Context/PorfolioContext';
+import React, { /*useContext, useEffect, useState*/ } from 'react';
+//import { PorfolioContext } from '../../Context/PorfolioContext';
 //import { BlogPost } from './blogComponent/BlogPost';
 
 import './BlogPage.scss';
 
 export const BlogPage = () => {
 
+    /*
     const { blogs, setToggleMenu } = useContext(PorfolioContext);
 
     useEffect(() => {
