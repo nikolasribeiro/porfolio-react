@@ -3,6 +3,11 @@ import { Redirect, useParams } from 'react-router';
 import { PorfolioContext } from '../../../Context/PorfolioContext';
 import './BlogDetail.scss';
 import dateFormat from 'dateformat';
+/*
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+*/
+import { Markup } from 'interweave';
 
 export const BlogDetail = () => {
 
@@ -56,7 +61,7 @@ export const BlogDetail = () => {
                     </div>
 
                     <div className="detail-content">
-                        {long_blog_description}
+                        <Markup content={long_blog_description}/>
                     </div>
                 </div>
 

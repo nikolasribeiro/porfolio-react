@@ -13,6 +13,7 @@ import { AboutPage } from './components/pages/about/AboutPage';
 import { BlogDetail } from './components/pages/blog/blogdetail/BlogDetail';
 import { BlogPage } from './components/pages/blog/BlogPage';
 import { ContactPage } from './components/pages/contact/ContactPage';
+import { Dashboard } from './components/pages/dashboard/Dashboard';
 import { HomePage } from './components/pages/home/HomePage';
 import { PorfolioDetail } from './components/pages/porfolio/detailPorfolio/PorfolioDetail';
 import { PorfolioPage } from './components/pages/porfolio/PorfolioPage';
@@ -57,12 +58,13 @@ function App() {
             <Route exact path="/"> 
               <HomePage />
             </Route>
-            <Route exact path="/about" component={ AboutPage }/>
-            <Route exact path="/porfolio" component={ PorfolioPage }/>
+            <Route exact path="/about"            component={ AboutPage }/>
+            <Route exact path="/porfolio"         component={ PorfolioPage }/>
             <Route exact path="/porfolio/:number" component={ PorfolioDetail }/>
-            <Route exact path="/blog" component={ BlogPage }/>
-            <Route exact path="/blog/:slug" component={ BlogDetail } />
-            <Route exact path="/contact" component={ ContactPage }/>
+            <Route exact path="/blog"             component={ BlogPage }/>
+            <Route exact path="/blog/:slug"       component={ BlogDetail } />
+            <Route exact path="/contact"          component={ ContactPage }/>
+            <Route exact path="/dashboard"        component={ Dashboard }/>
           </Switch>
           {/* /Switch path */}
         </div>
