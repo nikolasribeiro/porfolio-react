@@ -1,12 +1,11 @@
-import React, { /*useContext, useEffect, useState*/ } from 'react';
-//import { PorfolioContext } from '../../Context/PorfolioContext';
-//import { BlogPost } from './blogComponent/BlogPost';
+import React, { useContext, useEffect, useState } from 'react';
+import { PorfolioContext } from '../../Context/PorfolioContext';
+import { BlogPost } from './blogComponent/BlogPost';
 
 import './BlogPage.scss';
 
 export const BlogPage = () => {
 
-    /*
     const { blogs, setToggleMenu } = useContext(PorfolioContext);
 
     useEffect(() => {
@@ -18,7 +17,6 @@ export const BlogPage = () => {
     });
     const { search } = inputSearch;
 
-    /*
     const handleInputChange = ({ target }) => {
         setInputSearch({
             ...inputSearch,
@@ -29,19 +27,9 @@ export const BlogPage = () => {
     let filteredBlogs = blogs.filter(post => (
         post.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
     ));
-    */
-    return (
 
-        <div style={{
-            width: '100wh',
-            height: '90vh',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-        }}>
-            <h1>PAGINA BAJO MANTENIMIENTO</h1>
-        {/* 
-            <div className="blog-wrapper">
+    return (
+        <div className="blog-wrapper">
 
             <div className="blog-container">
 
@@ -69,9 +57,5 @@ export const BlogPage = () => {
             </aside>
 
         </div>
-        */}
-        </div>
-
-        
     );
 }
