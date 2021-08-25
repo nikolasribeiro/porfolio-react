@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Redirect, useParams } from 'react-router';
 import { PorfolioContext } from '../../../Context/PorfolioContext';
 import './PorfolioDetail.scss';
-
+import { Markup } from 'interweave';
 
 export const PorfolioDetail = () => {
 
@@ -44,7 +44,7 @@ export const PorfolioDetail = () => {
                     />
                 </div>
                 <div className="explain-container">
-                    {long_description}
+                <Markup content={long_description}/>
                 </div>
             
             </div>
