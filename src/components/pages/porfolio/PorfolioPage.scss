@@ -151,6 +151,17 @@
     }
 }
 
+
+/* Loading styles */
+.loading-container{
+    height: 94vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media only screen and (max-width: 1024px){
     .grid-layout{
         grid-template-columns: 100%;

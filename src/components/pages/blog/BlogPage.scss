@@ -135,6 +135,18 @@
 
 }
 
+
+/* Loading styles */
+.loading-container{
+    height: 94vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 @media (max-width: 1440px){
     .blog-wrapper{
         grid-template-columns: 75% 35% !important;
